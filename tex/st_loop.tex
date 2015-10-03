@@ -12,6 +12,32 @@
 %GNU General Public License for more details.
 %----------------------------------------
 
-\input{st_var}
-\input{st_branch}
-\input{st_loop}
+\section{Schleifen}
+\subsection{For Schleife}
+\lstsettingst
+\begin{lstlisting}
+FOR i := 0 TO 100 BY 10 DO
+    a[i] := i;
+END_FOR
+\end{lstlisting}
+
+\subsection{While Schleife}
+\lstsettingst
+\begin{lstlisting}
+i := 0;
+WHILE i < 100 DO
+    a[i] := i;
+    i := i + 1;
+END_WHILE
+\end{lstlisting}
+
+\subsection{Repeat until Schleife}
+\lstsettingst
+\begin{lstlisting}
+i := 0;
+REPEAT
+    a[i] := i;
+    i := i + 1;
+UNTIL i > 100
+END_REPEAT
+\end{lstlisting}

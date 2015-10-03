@@ -12,6 +12,32 @@
 %GNU General Public License for more details.
 %----------------------------------------
 
-\input{st_var}
-\input{st_branch}
-\input{st_loop}
+\section{Verzweigungen}
+\subsection{If else Verzweigung}
+\lstsettingst
+\begin{lstlisting}
+IF a > 5 THEN
+    b := 5;
+ELSIF a < 2 THEN
+    b := 2;
+ELSE
+    b := a;
+END_IF
+\end{lstlisting}
+
+\subsection{Case Verzweigung}
+\lstsettingst
+\begin{lstlisting}
+CASE a OF
+0 :
+    b := 3;
+1 :
+    b := 2;
+2 :
+    b := 1;
+3 :
+    b := 0;
+ELSE
+    b := a;
+END_CASE
+\end{lstlisting}
