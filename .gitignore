@@ -14,6 +14,7 @@
 # *.ps
 # *.eps
 # *.pdf
+fosaats_main.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
