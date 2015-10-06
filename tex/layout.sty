@@ -48,6 +48,7 @@
 \definecolor{red}{rgb}{1, 0, 0}
 \definecolor{green}{rgb}{0, 1, 0}
 \definecolor{blue}{rgb}{0, 0, 1}
+\definecolor{darkgreen}{rgb}{0, 0.5, 0}
 
 \usepackage{fancyhdr}                        % http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Customising_with_fancyhdr
 
@@ -84,30 +85,94 @@
 
 \lstdefinelanguage{st}
 {
-  % list of keywords
-  keywords={
-    IF,
-    THEN,
-    ELSE,
-    ELSIF,
-    END_IF,
-    CASE,
-    OF,
-    END_CASE,
-    WHILE,
-    DO,
-    END_WHILE,
-    REPEAT,
-    UNTIL,
-    END_REPEAT,
-    FOR,
-    TO,
-    BY,
-    END_FOR
-  },
-  sensitive=true,
-  morecomment=[s]{(*}{*)},
-  morestring=[b]'
+    %alsodigit{\%},
+    % list of keywords
+    % POUs
+    classoffset=0,
+    morekeywords={
+        PROGRAM,
+        FUNCTION_BLOCK,
+        FUNCTION,
+    }, keywordstyle=\color{blue},
+    % Variables
+    classoffset=1,
+    morekeywords={
+        VAR,
+        VAR_INPUT,
+        VAR_OUTPUT,
+        VAR_GLOBAL,
+        END_VAR,
+    }, keywordstyle=\color{blue},
+    % Branches
+    classoffset=2,
+    morekeywords={
+        IF,
+        THEN,
+        ELSE,
+        ELSIF,
+        END_IF,
+        CASE,
+        OF,
+        END_CASE,
+    }, keywordstyle=\color{blue},
+    % Loops
+    classoffset=3,
+    morekeywords={
+        WHILE,
+        DO,
+        END_WHILE,
+        REPEAT,
+        UNTIL,
+        END_REPEAT,
+        FOR,
+        TO,
+        BY,
+        END_FOR,
+        EXIT,
+        RETURN,
+    }, keywordstyle=\color{blue},
+    % Types
+    classoffset=4,
+    morekeywords={
+        BOOL,
+        BYTE,
+        WORD,
+        DWORD,
+        LWORD,
+        SINT,
+        INT,
+        DINT,
+        LINT,
+        USINT,
+        UINT,
+        UDINT,
+        ULINT,
+        REAL,
+        LREAL,
+        TIME,
+        DATE,
+        TIME_OF_DAY,
+        TOD,
+        DATE_AND_TIME,
+        DT,
+        STRING,
+        ARRAY,
+    }, keywordstyle=\color{blue},
+    % Constants for Booleans
+    classoffset=5,
+    morekeywords={
+        TRUE,
+        FALSE,
+    }, keywordstyle=\color{blue},
+    % Conversions
+    classoffset=6,
+    morekeywords={
+        WORD_TO_INT,
+    }, keywordstyle=\color{blue},
+    classoffset=0,
+    sensitive=true,
+    morecomment=[s]{(*}{*)},
+    morestring=[b]'
 }
 
 \lstset{language=st}
@@ -117,7 +182,7 @@
     %numberstyle=\tiny, 
     %numbersep=5pt,
     breaklines=true,
-    %texcsstyle=\color{black},
+    %texcsstyle=\color{red},
     backgroundcolor=\color{gray!10},
     commentstyle=\color{darkgreen},
     keywordstyle=\color{blue}\bfseries,
@@ -149,7 +214,7 @@
         %numberstyle=\tiny, 
         %numbersep=5pt,
         breaklines=true,
-        %texcsstyle=\color{blue},
+        %texcsstyle=\color{red},
         backgroundcolor=\color{gray!10},
         commentstyle=\color{darkgreen},
         keywordstyle=\color{blue}\bfseries,
