@@ -1,0 +1,69 @@
+%FOSAATS, a LaTeX-Code for a summary of programmable logic controllers
+%Copyright (C) 2015, Daniel Winz
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\section{POUs (Program organization units)}
+
+\subsection{Program}
+\lstsettingst
+\begin{lstlisting}
+PROGRAM MAIN
+VAR
+    i : INT := 0;
+END_VAR
+
+i := i + 1;
+\end{lstlisting}
+
+\subsection{Function Block}
+\lstsettingst
+\begin{lstlisting}
+FUNCTION_BLOCK EdgeDetector
+VAR_INPUT
+    inputValue : BOOL;
+END_VAR
+VAR_OUTPUT
+    risingEdge : BOOL;
+    fallingEdge : BOOL;
+END_VAR
+VAR
+    prev : BOOL := FALSE;
+END_VAR
+
+IF inputValue > prev THEN
+    risingEdge  := TRUE;
+    fallingEdge := FALSE;
+ELSIF inputValue < prev THEN
+    risingEdge  := FALSE;
+    fallingEdge := TRUE;
+ELSE
+    risingEdge  := FALSE;
+    fallingEdge := FALSE;
+END_IF
+prev := inputValue;
+\end{lstlisting}
+
+\subsection{Function}
+\lstsettingst
+\begin{lstlisting}
+FUNCTION Addition : REAL
+VAR_INPUT
+    a : REAL;
+    b : REAL;
+END_VAR
+VAR
+END_VAR
+
+Addition := a + b;
+\end{lstlisting}
+
