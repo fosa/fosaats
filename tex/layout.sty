@@ -50,6 +50,11 @@
 \definecolor{blue}{rgb}{0, 0, 1}
 \definecolor{darkgreen}{rgb}{0, 0.5, 0}
 
+% Special tables
+    % light gray and white alternating
+    \newenvironment{zebratabular}{\rowcolors{2}{lgray}{white}\tabular}{\endtabular}
+    \newenvironment{zebralongtable}{\rowcolors{2}{lgray}{white}\longtable}{\endlongtable}
+
 \usepackage{fancyhdr}                        % http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Customising_with_fancyhdr
 
 \pagestyle{fancy} %eigener Seitenstil
