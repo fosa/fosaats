@@ -48,3 +48,18 @@ VAR_GLOBAL CONSTANT
     st_green : INT := 3;
 END_VAR
 \end{lstlisting}
+
+\subsection{Arrays}
+\lstsettingst
+\begin{lstlisting}
+VAR
+    i      : INT;
+    (* Variable instanzieren *)
+    buffer : ARRAY[1 .. 10] OF INT;
+END_VAR
+
+(* Zugriff auf Variable *)
+FOR i := 1 TO 9 BY 1 DO
+    buffer[i] := i;
+END_FOR
+\end{lstlisting}
