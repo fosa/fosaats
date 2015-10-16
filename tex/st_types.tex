@@ -13,6 +13,8 @@
 %----------------------------------------
 
 \section{Datentypen}
+
+\subsection{ST Datentypen}
 \begin{zebratabular}{@{}lrll}
     \rowcolor{gray} Typ       & \# Bit & Min                             & Max                             \\
     \lstinline?BOOL?          &  1     & \lstinline?FALSE?               & \lstinline?TRUE?                \\
@@ -39,14 +41,32 @@
     \lstinline?STRING?        &        & \lstinline??                    & \lstinline??                    \\
 \end{zebratabular}
 
-\section{Strukturen}
+\clearpage
+
+\subsection{Eigene Datentypen -- Strukturen}
 \lstsettingst
 \begin{lstlisting}
-TYPE UI_Output :
+TYPE IO :
 STRUCT
-	lightGreen      : BOOL;
-	lightRed        : BOOL;
-	intAnalogOutput : INT;
+    buttonYellow : BOOL;
+    buttonBlue : BOOL;
+    lightGreen : BOOL;
+    lightRed : BOOL;
+    inductiveSensor : BOOL;
+    intUltrasonicSensor : INT;
+    intAnalogOutput : INT;
 END_STRUCT
+END_TYPE
+\end{lstlisting}
+
+\subsection{Eigene Datentypen -- Aufzählungen}
+\lstsettingst
+\begin{lstlisting}
+TYPE st_fsm :
+(
+    ST_init := 1,
+    ST_start,
+    ST_stop
+);
 END_TYPE
 \end{lstlisting}
