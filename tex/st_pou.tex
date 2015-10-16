@@ -39,7 +39,6 @@ END_VAR
 Addition := a + b;
 \end{lstlisting}
 
-\subsubsection{Aufruf}
 \lstsettingst
 \begin{lstlisting}
 PROGRAM MAIN
@@ -49,8 +48,6 @@ END_VAR
 a := Addition(1, 2);
 \end{lstlisting}
 
-\clearpage
-
 \subsection{Function Block}
 \lstsettingst
 \begin{lstlisting}
@@ -59,22 +56,34 @@ VAR_INPUT
     inputValue : BOOL;
 END_VAR
 VAR_OUTPUT
-    risingEdge : BOOL;
+    risingEdge  : BOOL;
     fallingEdge : BOOL;
 END_VAR
 VAR
     prev : BOOL := FALSE;
 END_VAR
 
+risingEdge  := FALSE;
+fallingEdge := FALSE;
 IF inputValue > prev THEN
     risingEdge  := TRUE;
-    fallingEdge := FALSE;
 ELSIF inputValue < prev THEN
-    risingEdge  := FALSE;
     fallingEdge := TRUE;
-ELSE
-    risingEdge  := FALSE;
-    fallingEdge := FALSE;
 END_IF
 prev := inputValue;
+\end{lstlisting}
+
+\lstsettingst
+\begin{lstlisting}
+PROGRAM MAIN
+VAR
+    a        : int;
+    btn_blue : EdgeDetector;
+END_VAR
+edge_blue(inputValue := btn_blue);
+IF edge_blue.risingEdge THEN
+    a := a + 1;
+ELSIF edge_blue.fallingEdge THEN
+    a := a - 1;
+END_IF
 \end{lstlisting}
