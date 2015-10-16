@@ -25,6 +25,32 @@ END_VAR
 i := i + 1;
 \end{lstlisting}
 
+\subsection{Function}
+\lstsettingst
+\begin{lstlisting}
+FUNCTION Addition : REAL
+VAR_INPUT
+    a : REAL;
+    b : REAL;
+END_VAR
+VAR
+END_VAR
+
+Addition := a + b;
+\end{lstlisting}
+
+\subsubsection{Aufruf}
+\lstsettingst
+\begin{lstlisting}
+PROGRAM MAIN
+VAR
+    a : int;
+END_VAR
+a := Addition(1, 2);
+\end{lstlisting}
+
+\clearpage
+
 \subsection{Function Block}
 \lstsettingst
 \begin{lstlisting}
@@ -52,18 +78,3 @@ ELSE
 END_IF
 prev := inputValue;
 \end{lstlisting}
-
-\subsection{Function}
-\lstsettingst
-\begin{lstlisting}
-FUNCTION Addition : REAL
-VAR_INPUT
-    a : REAL;
-    b : REAL;
-END_VAR
-VAR
-END_VAR
-
-Addition := a + b;
-\end{lstlisting}
-
