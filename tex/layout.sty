@@ -49,6 +49,7 @@
 \definecolor{green}{rgb}{0, 1, 0}
 \definecolor{blue}{rgb}{0, 0, 1}
 \definecolor{darkgreen}{rgb}{0, 0.5, 0}
+\definecolor{stred}{rgb}{1, 0, 1}
 
 % Special tables
     % light gray and white alternating
@@ -109,11 +110,15 @@
         VAR_GLOBAL,
         END_VAR,
         AT,
+    }, keywordstyle=\color{blue},
+    % I/O Variables
+    classoffset=2,
+    morekeywords={
        \%I*,
        \%Q*,
-    }, keywordstyle=\color{blue},
+    }, keywordstyle=\color{stred},
     % Branches
-    classoffset=2,
+    classoffset=3,
     morekeywords={
         IF,
         THEN,
@@ -125,7 +130,7 @@
         END_CASE,
     }, keywordstyle=\color{blue},
     % Loops
-    classoffset=3,
+    classoffset=4,
     morekeywords={
         WHILE,
         DO,
@@ -141,7 +146,7 @@
         RETURN,
     }, keywordstyle=\color{blue},
     % Types
-    classoffset=4,
+    classoffset=5,
     morekeywords={
         BOOL,
         BYTE,
@@ -172,22 +177,27 @@
         END_STRUCT,
     }, keywordstyle=\color{blue},
     % Constants for Booleans
-    classoffset=5,
+    classoffset=6,
     morekeywords={
         TRUE,
         FALSE,
-    }, keywordstyle=\color{blue},
+    }, keywordstyle=\color{stred},
     % Conversions
-    classoffset=6,
+    classoffset=7,
     morekeywords={
         WORD_TO_INT,
         INT_TO_WORD,
         REAL_TO_INT,
         INT_TO_REAL,
     }, keywordstyle=\color{blue},
+    % Special letters for I/O variables
+    alsoletter={\%, \*},
+    % Reset classoffset
     classoffset=0,
     sensitive=true,
+    % Comments
     morecomment=[s]{(*}{*)},
+    % Strings
     morestring=[b]'
 }
 
