@@ -15,30 +15,99 @@
 \section{Datentypen}
 
 \subsection{ST Datentypen}
-\begin{zebratabular}{@{}lrll}
-    \rowcolor{gray} Typ       & \# Bit & Min                             & Max                             \\
-    \lstinline?BOOL?          &  1     & \lstinline?FALSE?               & \lstinline?TRUE?                \\
-    \lstinline?BYTE?          &  8     & \lstinline?8#00?                & \lstinline?8#FF?                \\
-    \lstinline?WORD?          & 16     & \lstinline?16#0000?             & \lstinline?16#FFFF?             \\
-    \lstinline?DWORD?         & 32     & \lstinline?32#00000000?         & \lstinline?32#FFFFFFFF?         \\
-    \lstinline?LWORD?         & 64     & \lstinline?64#0000000000000000? & \lstinline?64#FFFFFFFFFFFFFFFF? \\
-    \lstinline?SINT?          &  8     & \lstinline?-128?                & \lstinline?127?                 \\
-    \lstinline?INT?           & 16     & \lstinline?-32768?              & \lstinline?32767?               \\
-    \lstinline?DINT?          & 32     & \lstinline?-2147483648?         & \lstinline?2147483648?          \\
-    \lstinline?LINT?          & 64     & $-9.223372037 \cdot 10^{18}$    & $9.223372037 \cdot 10^{18}$     \\
-    \lstinline?USINT?         &  8     & \lstinline?0?                   & \lstinline?255?                 \\
-    \lstinline?UINT?          & 16     & \lstinline?0?                   & \lstinline?65535?               \\
-    \lstinline?UDINT?         & 32     & \lstinline?0?                   & \lstinline?4294967296?          \\
-    \lstinline?ULINT?         & 64     & \lstinline?0?                   & $18.446744074 \cdot 10^{18}$    \\
-    \lstinline?REAL?          & 32     & \lstinline??                    & \lstinline??                    \\
-    \lstinline?LREAL?         & 64     & \lstinline??                    & \lstinline??                    \\
-    \lstinline?TIME?          & 32     & \lstinline??                    & \lstinline??                    \\
-    \lstinline?DATE?          &        & \lstinline??                    & \lstinline??                    \\
-    \lstinline?TIME_OF_DAY?   &        & \lstinline??                    & \lstinline??                    \\
-    \lstinline?TOD?           &        & \lstinline??                    & \lstinline??                    \\
-    \lstinline?DATE_AND_TIME? &        & \lstinline??                    & \lstinline??                    \\
-    \lstinline?DT?            &        & \lstinline??                    & \lstinline??                    \\
-    \lstinline?STRING?        &        & \lstinline??                    & \lstinline??                    \\
+\begin{zebratabular}{@{}lrllr@{}l}
+    \rowcolor{gray} Typ &
+        \# Bit &
+        Min &
+        Max \\
+    \lstinline?BOOL? &
+        1 &
+        \lstinline?FALSE? &
+        \lstinline?TRUE? \\
+    \lstinline?BYTE? &
+        8 &
+        $0$ &
+        $255$ \\
+    \lstinline?WORD? &
+        16 &
+        $0$ &
+        $65'535$ \\
+    \lstinline?DWORD? &
+        32 &
+        $0$ &
+        $4'294'967'295$ \\
+    \lstinline?LWORD? &
+        64 &
+        $0$ &
+        $18.44674 \cdot 10^{18}$ \\
+    \lstinline?SINT? &
+        8 &
+        $-128$ &
+        $127$ \\
+    \lstinline?INT? &
+        16 &
+        $-32'768$ &
+        $32'767$ \\
+    \lstinline?DINT? &
+        32 &
+        $-2'147'483'647$ &
+        $2'147'483'648$ \\
+    \lstinline?LINT? &
+        64        &
+        $-9.22337 \cdot 10^{18}$  &
+        $9.22337 \cdot 10^{18}$   \\
+    \lstinline?USINT? &
+        8 &
+        $0$ &
+        $255$ \\
+    \lstinline?UINT? &
+        16 &
+        $0$ &
+        $65535$ \\
+    \lstinline?UDINT? &
+        32 &
+        $0$ &
+        $4'294'967'295$ \\
+    \lstinline?ULINT? &
+        64 &
+        $0$ &
+        $18.44674 \cdot 10^{18}$\\
+    \lstinline?REAL? &
+        32 &
+        &
+        \\
+    \lstinline?LREAL? &
+        64 &
+        &
+        \\
+    \lstinline?TIME? &
+        32 &
+        &
+        \\
+    \lstinline?DATE? &
+        &
+        &
+        \\
+    \lstinline?TIME_OF_DAY? &
+        &
+        &
+        \\
+    \lstinline?TOD? &
+        &
+        &
+        \\
+    \lstinline?DATE_AND_TIME? &
+        &
+        &
+        \\
+    \lstinline?DT? &
+        &
+        &
+        \\
+    \lstinline?STRING? &
+        &
+        &
+        \\
 \end{zebratabular}
 
 \subsection{Typumwandlungen}
